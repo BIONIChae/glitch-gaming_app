@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glitch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://em-content.zobj.net/source/samsung/349/alien-monster_1f47e.png"
+      type="image/x-icon"
+    />
+    <style>
+      .container {
+        margin: 0 auto;
+      }
+
+      body {
+        background-image: linear-gradient(to top, #4b0085 0%, #aaff00 90%);
+        margin-bottom: 20px;
+      }
+      h1 {
+        color: rgb(219, 219, 219);
+        text-align: center;
+        font-family: "Press Start 2P", monospace;
+        font-size: 80px;
+        margin: 0 auto;
+        text-shadow: 2px 4px 6px#ffffff;
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 40px;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+        }
+
+        p {
+            padding: 20px;
+        }
+
+      }
+
+      h2 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 35px;
+        font-family: system-ui, sans-serif;
+        margin: 0 0 10px 0;
+      }
+      ul {
+        padding: 0;
+        list-style-type: none;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      p {
+        font-family: system-ui, sans-serif;
+        text-align: center;
+      }
+
+      a {
+        color: #5bf52c;
+        font-weight: 900;
+        text-decoration: none;
+        transition: all 160ms ease-in-out;
+      }
+      a:hover {
+        color: rgb(143, 93, 137);
+        cursor: pointer;
+      }
+      button {
+        display: block;
+        margin: 50px auto;
+        background-color: rgb(225, 255, 161);
+        font-family: system-ui, sans-serif;
+        color: rgb(98, 0, 174);
+        font-weight: 900;
+        padding: 20px 30px;
+        border: 1px solid rgb(169, 169, 169);
+        border-radius: 20px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        color: #5bf52c;
+        background-color: rgb(0, 0, 0);
+        border: 2px solid white;
+      }
+      .platform {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="platform">
+        <img
+          src="https://em-content.zobj.net/source/telegram/358/alien-monster_1f47e.webp"
+          width="150"
+          class="m-0"
+        />
+        <h1>Glitch</h1>
+        <h2><strong>The Gamers Hub</strong></h2>
+        <img class="img-fluid" src="images/console.png" width="380" height="380" />
+        <p>
+          The ultimate app to
+          <em>
+            <a href="https://www.youtube.com/gaming/games" target="_blank"
+              >STREAM</a
+            >
+            and
+            <a href="https://store.epicgames.com/en-US/" target="_blank"
+              >BUY GAMES</a
+            ></em
+          >
+          online.
+        </p>
+        <button>SIGN UP</button>
+      </div>
+
+      <script>
+        function signIn() {
+          let userName = prompt("Enter your 👾Glitch user name");
+          let email = prompt("Enter your email address");
+          let age = prompt("How old are you?");
+          let head = document.querySelector("h2");
+
+          if (age < 12) {
+            head.innerHTML = "Woah! Too young!❌";
+          } else {
+            alert(
+              "A sign-in verification to " + email + " will be sent shortly."
+            );
+            head.innerHTML = `👾Glitch in, ${userName}!`;
+            alert("Account Verified!✅");
+          }
+        }
+        let element = document.querySelector("button");
+        element.addEventListener("click", signIn);
+      </script>
+    </div>
+  </body>
+</html>
